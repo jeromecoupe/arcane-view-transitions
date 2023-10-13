@@ -28,11 +28,13 @@ permalink: index.html
                 <article class="c-character-card">
                   <a class="c-character-card__link" href="{{ item.url }}">
                     <img src="/assets/img/characters/600x600/{{ item.data.image }}"
-                        class="c-character-card__img  o-fluidimg  u-radius-s"
-                        width="600"
-                        height="600"
-                        style="view-transition-name: {{ item.fileSlug }};"
-                        alt="{{ item.data.name }}">
+                         class="c-character-card__img  o-fluidimg  u-radius-s"
+                         width="600"
+                         height="600"
+                         style="view-transition-name: {{ item.fileSlug }};"
+                         alt="{{ item.data.name }}"
+                         loading="lazy"
+                         decoding="async">
                   </a>
                 </article>
 
