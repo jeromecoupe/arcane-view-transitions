@@ -5,10 +5,6 @@
 .c-character-card {
   opacity: 1;
   transition: opacity 0.2s ease-out;
-
-  &:not(:hover) {
-    opacity: 0.84;
-  }
 }
 
 .c-character-card__link {
