@@ -1,0 +1,46 @@
+---
+permalink: index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle = site.metaTitle %}
+
+{% block content %}
+  <div class="c-section">
+      <div class="l-container  l-home">
+        <div class="l-home__intro">
+          
+          <h1 class="u-sronly">Page View Transitions Demo</h1>
+          <p>An exploration of progressively enhanced Page Views Transitions using CSS only.</p>
+          <p>To see the demo, use chrome and turn on the following flags: "viewTransition AP" and "viewTransition API for navigations".</p>
+          <div class="c-homecredits">
+            <p class="c-homecredits__author">Demo by Jérôme Coupé.</p>
+            <p class="c-homecredits__source"><a href="#">Source code</a> on Github.</p>
+          </div>
+        </div>
+
+        <div class="l-home__content">
+          {% for item in collections.characters %}
+            {% if loop.first %}<ul class="c-characters-list">{% endif %}
+              <li>
+
+                <article class="c-character-card">
+                  <a class="c-character-card__link" href="{{ item.url }}">
+                    <img src="/assets/img/characters/600x600/{{ item.data.image }}"
+                        class="c-character-card__img  o-fluidimg  u-radius-s"
+                        width="600"
+                        height="600"
+                        style="view-transition-name: {{ item.fileSlug }};"
+                        alt="{{ item.data.name }}">
+                  </a>
+                </article>
+
+              </li>
+            {% if loop.last %}</ul>{% endif %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+{% endblock %}

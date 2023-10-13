@@ -1,0 +1,21 @@
+/* =====================================
+home layout
+===================================== */
+
+.l-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: calc(24 / 16 * 1rem);
+}
+
+@media all and (min-width: 750px) {
+  .l-home {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .l-home {
+    grid-template-columns: 1fr 3fr;
+  }
+}

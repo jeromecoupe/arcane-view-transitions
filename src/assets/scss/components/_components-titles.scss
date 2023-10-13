@@ -1,0 +1,12 @@
+/* =====================================
+=titles
+===================================== */
+
+.c-h1 {
+  margin-block-end: 0.5em;
+  font-weight: 500;
+  font-size: clamp(45 / 16 * 1rem, 1rem + 3vw, 54 / 16 * 1rem);
+  line-height: 1.08;
+  font-family: var(--fontstack-alt);
+  color: var(--color-accent);
+}

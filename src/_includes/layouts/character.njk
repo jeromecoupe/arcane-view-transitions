@@ -1,0 +1,36 @@
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle = name + " - " + site.metaTitle %}
+
+{% block content %}
+  <div class="c-section">
+    <div class="l-container  l-detail">
+      <div class="l-detail__content">
+
+        <div class="c-chardetail">
+          <div class="c-chardetail__info">
+            <h1 class="c-h1  c-chardetail__title">{{ name }}</h1>
+            <p class="c-chardetail__subtitle">{{ role }}</p>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni consectetur dolore sunt
+            voluptates
+            odio ex libero, quaerat ipsam eius eaque asperiores illum. Deleniti ab voluptatum reiciendis odio sunt
+            voluptatibus.</p>
+          <p><a class="c-backlink" href="/">All characters</a></p>
+        </div>
+
+      </div>
+      <div class="l-detail__media">
+        <img src="/assets/img/characters/600x600/{{ image }}"
+              srcset="/assets/img/characters/600x600/{{ image }} 600w,
+                      /assets/img/characters/800x800/{{ image }} 800w,
+                      /assets/img/characters/1024x1024/{{ image }} 1024w"
+              sizes="(min-width: 750px) 50vw,
+                    100vw"
+              class="o-fluidimg  u-radius-m"
+              style="view-transition-name: {{ page.fileSlug }};"
+              alt="{{ name }}">
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+/* =====================================
+=character
+===================================== */
+
+.c-character-card {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+
+  &:not(:hover) {
+    opacity: 0.84;
+  }
+}
+
+.c-character-card__link {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-s);
+}
+
+.c-character-card__img {
+  z-index: 5;
+  transition: transform 0.2s ease-out;
+
+  a:hover & {
+    transform: scale(1.018);
+  }
+}

@@ -1,0 +1,24 @@
+/* =====================================
+character detail
+===================================== */
+
+.c-chardetail {
+  display: block;
+}
+
+.c-chardetail__info {
+  margin-block-end: calc(24 / 16 * 1rem);
+}
+
+.c-chardetail__title {
+  margin-block-end: calc(6 / 16 * 1rem);
+}
+
+.c-chardetail__subtitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: calc(21 / 16 * 1rem);
+  line-height: 1.2;
+  font-family: var(--fontstack-alt);
+  color: var(--color-txt-offset);
+}

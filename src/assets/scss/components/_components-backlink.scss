@@ -1,0 +1,39 @@
+/* =====================================
+=back link
+===================================== */
+
+.c-backlink {
+  color: var(--color-txt);
+  padding-block: calc(3 / 16 * 1rem);
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: calc(10 / 16 * 1rem);
+
+  text-decoration: underline;
+  text-underline-offset: 0.24em;
+  text-decoration-color: rgba(255, 255, 255, 0.42);
+}
+
+.c-backlink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.24em;
+  text-decoration-color: rgba(255, 255, 255, 0.42);
+}
+
+.c-backlink::before {
+  display: inline-block;
+  content: "";
+  width: 24px;
+  height: 12px;
+  background-image: url(../img/icon-back-arrow.svg);
+  background-repeat: no-repeat;
+
+  transition: transform 0.2s ease-out;
+}
+
+.c-backlink:hover::before {
+  transform: translate3d(-3px, 0, 0);
+}

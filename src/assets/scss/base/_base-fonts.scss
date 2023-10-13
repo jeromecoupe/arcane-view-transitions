@@ -1,0 +1,12 @@
+/* =====================================
+=Fonts
+===================================== */
+
+@font-face {
+  font-family: "Cormorant";
+  src: url(../fonts/cormorant-variable.woff2) format("woff2") tech("variations"),
+    url(../fonts/cormorant-variable.woff2) format("woff2-variations");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
