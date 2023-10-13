@@ -15,7 +15,8 @@
     "eleventy": "npx @11ty/eleventy --quiet",
     "watch:styles": "onchange \"./src/assets/scss/**/*\" -- npm run styles:dev",
     "build": "npm-run-all clean --parallel styles:prod eleventy",
-    "dev": "npm-run-all --parallel server watch:*"
+    "dev": "npm-run-all --parallel server watch:*",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "css",
