@@ -1,6 +1,6 @@
 ---
 name: Mel
-role: Ambitious conseillor
+role: Ambitious counsellor
 image: mel.jpg
 ---
 
