@@ -4,16 +4,12 @@
 
 .c-sitefooter {
   margin-block-start: calc(42 / 16 * 1rem);
-}
 
-@media all and (min-width: 750px) {
-  .c-sitefooter {
+  @media (width >= 750px) {
     margin-block-start: calc(48 / 16 * 1rem);
   }
-}
 
-@media all and (min-width: 1024px) {
-  .c-sitefooter {
+  @media (width >= 1024px) {
     margin-block-start: calc(60 / 16 * 1rem);
   }
 }

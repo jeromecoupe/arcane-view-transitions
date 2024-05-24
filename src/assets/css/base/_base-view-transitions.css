@@ -1,0 +1,9 @@
+/* =====================================
+=view transitions
+===================================== */
+
+/* as per https://developer.chrome.com/docs/web-platform/view-transitions/cross-document */
+
+@view-transition {
+  navigation: auto;
+}

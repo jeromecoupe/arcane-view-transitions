@@ -7,24 +7,18 @@ detail layout
   grid-template-columns: 1fr;
   grid-template-areas: "a" "b";
   gap: calc(30 / 16 * 1rem);
-}
 
-@media all and (min-width: 750px) {
-  .l-detail {
+  @media (width >= 750px) {
     grid-template-columns: 5fr 7fr;
     grid-template-areas: "b a";
     gap: calc(30 / 16 * 1rem);
   }
-}
 
-@media all and (min-width: 1024px) {
-  .l-detail {
+  @media (width >= 1024px) {
     grid-template-columns: 5fr 7fr;
   }
-}
 
-@media all and (min-width: 1200px) {
-  .l-detail {
+  @media (width >= 1200px) {
     grid-template-columns: 4fr 1fr 7fr;
     grid-template-areas: "b . a";
     column-gap: calc(18 / 16 * 1rem);

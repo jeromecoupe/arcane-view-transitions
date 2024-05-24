@@ -5,16 +5,12 @@
   --block-padding: calc(36 / 16 * 1rem);
 
   padding-block: var(--block-padding);
-}
 
-@media all and (min-width: 750px) {
-  .c-siteheader {
+  @media (width >= 750px) {
     --block-padding: calc(48 / 16 * 1rem);
   }
-}
 
-@media all and (min-width: 1024px) {
-  .c-siteheader {
+  @media (width >= 1024px) {
     --block-padding: calc(60 / 16 * 1rem);
   }
 }

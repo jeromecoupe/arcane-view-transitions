@@ -13,14 +13,12 @@
   "scripts": {
     "clean": "rimraf './dist'",
     "server": "npx @11ty/eleventy --serve --quiet",
-    "styles:prod": "sass --no-source-map --style=\"compressed\" \"./src/assets/scss/main.scss\" \"./dist/assets/css/main.css\"",
-    "styles:dev": "sass --embed-source-map --source-map-urls=\"absolute\" \"./src/assets/scss/main.scss\" \"./dist/assets/css/main.css\"",
-    "poststyles:prod": "postcss \"./dist/assets/css/main.css\" --replace --no-map --use autoprefixer cssnano",
+    "styles:dev": "lightningcss --bundle --browserslist \"./src/assets/css/main.css\" -o \"./dist/assets/css/main.css\"",
+    "styles:prod": "lightningcss --minify --bundle --browserslist \"./src/assets/css/main.css\" -o \"./dist/assets/css/main.css\"",
     "eleventy": "npx @11ty/eleventy --quiet",
-    "watch:styles": "onchange \"./src/assets/scss/**/*\" -- npm run styles:dev",
+    "watch:styles": "onchange \"./src/assets/css/**/*\" -- npm run styles:dev",
     "build": "npm-run-all clean --parallel styles:prod eleventy",
-    "dev": "npm-run-all --parallel server watch:*",
-    "postinstall": "npm run build"
+    "dev": "npm-run-all --parallel server watch:*"
   },
   "keywords": [
     "css",
@@ -31,13 +29,9 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "autoprefixer": "^10.4.16",
-    "cssnano": "^6.0.1",
+    "lightningcss-cli": "^1.25.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.30",
-    "postcss-cli": "^10.1.0",
-    "rimraf": "^5.0.1",
-    "sass": "^1.68.0"
+    "rimraf": "^5.0.7"
   }
 }

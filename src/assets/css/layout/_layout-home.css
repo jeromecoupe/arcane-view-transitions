@@ -6,16 +6,12 @@ home layout
   display: grid;
   grid-template-columns: 1fr;
   gap: calc(24 / 16 * 1rem);
-}
 
-@media all and (min-width: 750px) {
-  .l-home {
+  @media (width >= 750px) {
     grid-template-columns: 1fr 2fr;
   }
-}
 
-@media all and (min-width: 1024px) {
-  .l-home {
+  @media (width >= 1024px) {
     grid-template-columns: 1fr 3fr;
   }
 }

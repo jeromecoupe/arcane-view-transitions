@@ -8,16 +8,12 @@
   margin: 0 auto;
   max-width: 1500px;
   padding-inline: var(--hpadding);
-}
 
-@media all and (min-width: 750px) {
-  .l-container {
+  @media (width >= 750px) {
     --hpadding: calc(30 / 16 * 1rem);
   }
-}
 
-@media all and (min-width: 1024px) {
-  .l-container {
+  @media (width >= 1024px) {
     --hpadding: calc(48 / 16 * 1rem);
   }
 }
