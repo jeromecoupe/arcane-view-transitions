@@ -2,6 +2,10 @@
 
 {% set metaTitle = name + " - " + site.metaTitle %}
 
+{% block htmlhead %}
+  <link rel="expect" href="#detail-img" blocking="render" />
+{% endblock %}
+
 {% block content %}
   <div class="c-section">
     <div class="l-container  l-detail">

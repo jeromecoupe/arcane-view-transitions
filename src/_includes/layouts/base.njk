@@ -7,6 +7,7 @@
   <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="preload" href="/assets/fonts/cormorant-variable.woff2" as="font" type="font/woff2" crossorigin>
+  {% block htmlhead %}{% endblock %}
 </head>
 <body>
   {% include "partials/header.njk" %}

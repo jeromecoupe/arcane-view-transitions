@@ -1,7 +1,7 @@
-// collection
-const characters = require("./src/_11ty/collections/characters.js");
+// collections
+import { characters } from "./src/_11ty/collections/characters.js";
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   // collections
   eleventyConfig.addCollection("characters", characters);
 
@@ -20,17 +20,16 @@ module.exports = function (eleventyConfig) {
     watch: ["./dist/assets/css/**/*.css"],
     port: 3000,
   });
+}
 
-  // base config
-  return {
-    dir: {
-      input: "src",
-      output: "dist",
-      includes: "_includes",
-      data: "_data",
-    },
-    templateFormats: ["njk", "md"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-  };
+export const config = {
+  dir: {
+    input: "src",
+    output: "dist",
+    includes: "_includes",
+    data: "_data",
+  },
+  templateFormats: ["njk", "md"],
+  htmlTemplateEngine: "njk",
+  markdownTemplateEngine: "njk",
 };

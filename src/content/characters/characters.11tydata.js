@@ -1,4 +1,4 @@
-module.exports = {
-  permalink: "{{ page.fileSlug }}/index.html",
+export default {
+  permalink: "characters/{{ name | slug }}/index.html",
   layout: "layouts/character.njk",
 };
