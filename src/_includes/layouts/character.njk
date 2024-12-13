@@ -3,7 +3,7 @@
 {% set metaTitle = name + " - " + site.metaTitle %}
 
 {% block htmlhead %}
-  <link rel="expect" href="#detail-img" blocking="render" />
+  <link rel="expect" href="#detailmedia" blocking="render" />
 {% endblock %}
 
 {% block content %}
@@ -21,7 +21,7 @@
         </div>
 
       </div>
-      <div class="l-detail__media">
+      <div class="l-detail__media" id="#detailmedia">
         <img src="/assets/img/characters/600x600/{{ image }}"
              srcset="/assets/img/characters/600x600/{{ image }} 600w,
                      /assets/img/characters/800x800/{{ image }} 800w,
@@ -29,7 +29,6 @@
              sizes="(min-width: 750px) 50vw,
                    100vw"
              class="o-fluidimg  u-radius-s"
-             id="detail-img"
              style="view-transition-name: {{ page.fileSlug }};"
              width="1024"
              height="1024"
