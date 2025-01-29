@@ -1,0 +1,43 @@
+/* =====================================
+character detail
+===================================== */
+
+.c-character {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "a"
+    "b";
+  gap: 30px;
+
+  @media (width >= 750px) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas: "b a";
+  }
+
+  @media (width >= 1024px) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+
+  @media (width >= 1200px) {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 1fr) minmax(0, 7fr);
+    grid-template-areas: "b . a";
+    gap: 18px;
+  }
+}
+
+.c-character__media {
+  grid-area: a;
+}
+
+.c-character__content {
+  grid-area: b;
+}
+
+.c-character__role {
+  font-weight: 600;
+  font-size: calc(21 / 16 * 1rem);
+  line-height: 1.2;
+  font-family: var(--fontstack-alt);
+  color: var(--color-txt-offset);
+}

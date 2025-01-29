@@ -1,29 +1,30 @@
-@import "settings/_settings-variables.css";
+@layer settings, base, layout, objects, components, utilities;
 
-@import "base/_base-body.css";
-@import "base/_base-fonts.css";
-@import "base/_base-html.css";
-@import "base/_base-links.css";
-@import "base/_base-margins.css";
-@import "base/_base-view-transitions.css";
+@import "settings/_settings-variables.css" layer(settings);
 
-@import "layout/_layout-containers.css";
-@import "layout/_layout-home.css";
-@import "layout/_layout-detail.css";
+@import "base/_base-body.css" layer(base);
+@import "base/_base-fonts.css" layer(base);
+@import "base/_base-html.css" layer(base);
+@import "base/_base-links.css" layer(base);
+@import "base/_base-margins.css" layer(base);
+@import "base/_base-view-transitions.css" layer(base);
 
-@import "objects/_objects-fluidimages.css";
+@import "layout/_layout-container.css" layer(layout);
 
-@import "components/_components-titles.css";
-@import "components/_components-backlink.css";
-@import "components/_components-character-detail.css";
-@import "components/_components-character-card.css";
-@import "components/_components-characters-list.css";
-@import "components/_components-copyright.css";
-@import "components/_components-homecredits.css";
-@import "components/_components-logo.css";
-@import "components/_components-sitefooter.css";
-@import "components/_components-siteheader.css";
+@import "objects/_objects-fluidimages.css" layer(objects);
 
-@import "utilities/_utilities-radius.css";
-@import "utilities/_utilities-sronly.css";
-@import "utilities/_utilities-margins.css";
+@import "components/_components-home.css" layer(components);
+@import "components/_components-titles.css" layer(components);
+@import "components/_components-backlink.css" layer(components);
+@import "components/_components-character.css" layer(components);
+@import "components/_components-charcard.css" layer(components);
+@import "components/_components-charslist.css" layer(components);
+@import "components/_components-copyright.css" layer(components);
+@import "components/_components-homecredits.css" layer(components);
+@import "components/_components-logo.css" layer(components);
+@import "components/_components-sitefooter.css" layer(components);
+@import "components/_components-siteheader.css" layer(components);
+
+@import "utilities/_utilities-radius.css" layer(utilities);
+@import "utilities/_utilities-sronly.css" layer(utilities);
+@import "utilities/_utilities-margins.css" layer(utilities);

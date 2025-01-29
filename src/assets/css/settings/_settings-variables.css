@@ -1,14 +1,14 @@
 :root {
   --gutter: calc(24 / 16 * 1rem);
-  --color-bg: #000000;
+
+  --color-bg: #121212;
   --color-accent: #61d3ab;
   --color-txt: #f8f8f8;
   --color-txt-offset: #9f9d9f;
   --color-border: rgba(255, 255, 255, 0.18);
-  --color-bg-images: #1d1d1d;
+  --color-bg-images: #000000;
 
-  --fontstack-main: system-ui, "Helvetica Neue", "Helvetica", "Arial",
-    sans-serif;
+  --fontstack-main: "Helvetica Neue", system-ui, sans-serif;
   --fontstack-alt: "Cormorant", "Georgia", serif;
 
   --radius-s: 6px;

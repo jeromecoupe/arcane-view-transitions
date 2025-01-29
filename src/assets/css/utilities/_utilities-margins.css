@@ -4,19 +4,19 @@ margins
 
 /* none */
 .u-mbs-none {
-  margin-block-start: none;
+  margin-block-start: 0;
 }
 
 .u-mie-none {
-  margin-inline-end: none;
+  margin-inline-end: 0;
 }
 
 .u-mbe-none {
-  margin-block-end: none;
+  margin-block-end: 0;
 }
 
 .u-mis-none {
-  margin-inline-start: none;
+  margin-inline-start: 0;
 }
 
 /* xxs */

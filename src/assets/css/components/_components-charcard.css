@@ -1,18 +1,18 @@
 /* =====================================
-=character
+=card
 ===================================== */
 
-.c-character-card {
+.c-charcard {
   display: block;
 }
 
-.c-character-card__link {
+.c-charcard__link {
   display: block;
   overflow: clip;
   border-radius: var(--radius-s);
 }
 
-.c-character-card__img {
+.c-charcard__img {
   transition: transform 0.2s ease-out;
 
   a:hover & {

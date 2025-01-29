@@ -8,33 +8,36 @@
 
 {% block content %}
   <div class="c-section">
-    <div class="l-container  l-detail">
-      <div class="l-detail__content">
+    <div class="l-container">
 
-        <div class="c-chardetail">
-          <div class="c-chardetail__info">
-            <h1 class="c-h1  u-mbe-xxs">{{ name }}</h1>
-            <p class="c-chardetail__subtitle">{{ role }}</p>
-          </div>
+      <div class="c-character">
+        <div class="c-character__content">
+          <h1 class="c-h1  u-mbe-xxs">{{ name }}</h1>
+          <p class="c-character__role">{{ role }}</p>
+          <div>
             {{ content|safe }}
+          </div>
           <p><a class="c-backlink" href="/">All characters</a></p>
         </div>
+        <div class="c-character__media">
+          <img src="/assets/img/characters/600x600/{{ image }}"
+               srcset="/assets/img/characters/600x600/{{ image }} 600w,
+                       /assets/img/characters/800x800/{{ image }} 800w"
+               sizes="(min-width: 750px) 50vw,
+                      100vw"
+               class="o-fluidimg  u-radius-s"
+               style="view-transition-name: {{ page.fileSlug }};"
+               width="1024"
+               height="1024"
+               decoding="async"
+               alt="{{ name }}"
+               id="media">
+        
+        </div>
+      </div>
 
-      </div>
-      <div class="l-detail__media">
-        <img src="/assets/img/characters/600x600/{{ image }}"
-             srcset="/assets/img/characters/600x600/{{ image }} 600w,
-                     /assets/img/characters/800x800/{{ image }} 800w"
-             sizes="(min-width: 750px) 50vw,
-                    100vw"
-             class="o-fluidimg  u-radius-s"
-             style="view-transition-name: {{ page.fileSlug }};"
-             width="1024"
-             height="1024"
-             decoding="async"
-             alt="{{ name }}"
-             id="media">
-      </div>
+
+
     </div>
   </div>
 {% endblock %}
