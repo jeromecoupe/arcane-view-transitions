@@ -1,0 +1,71 @@
+/* =====================================
+margins
+===================================== */
+
+/* none */
+.u-mbs-none {
+  margin-block-start: none;
+}
+
+.u-mie-none {
+  margin-inline-end: none;
+}
+
+.u-mbe-none {
+  margin-block-end: none;
+}
+
+.u-mis-none {
+  margin-inline-start: none;
+}
+
+/* xxs */
+.u-mbs-xxs {
+  margin-block-start: 3px;
+}
+
+.u-mie-xxs {
+  margin-inline-end: 3px;
+}
+
+.u-mbe-xxs {
+  margin-block-end: 3px;
+}
+
+.u-mis-xxs {
+  margin-inline-start: 3px;
+}
+
+/* xs */
+.u-mbs-xs {
+  margin-block-start: 6px;
+}
+
+.u-mie-xs {
+  margin-inline-end: 6px;
+}
+
+.u-mbe-xs {
+  margin-block-end: 6px;
+}
+
+.u-mis-xs {
+  margin-inline-start: 6px;
+}
+
+/* sm */
+.u-mbs-sm {
+  margin-block-start: 12px;
+}
+
+.u-mie-sm {
+  margin-inline-end: 12px;
+}
+
+.u-mbe-sm {
+  margin-block-end: 12px;
+}
+
+.u-mis-sm {
+  margin-inline-start: 12px;
+}

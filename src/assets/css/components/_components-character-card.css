@@ -3,21 +3,21 @@
 ===================================== */
 
 .c-character-card {
-  opacity: 1;
-  transition: opacity 0.2s ease-out;
+  display: block;
 }
 
 .c-character-card__link {
   display: block;
-  overflow: hidden;
+  overflow: clip;
   border-radius: var(--radius-s);
 }
 
 .c-character-card__img {
-  z-index: 5;
   transition: transform 0.2s ease-out;
 
   a:hover & {
+    position: relative;
+    z-index: 1;
     transform: scale(1.018);
   }
 }

@@ -2,15 +2,15 @@
 =header
 ===================================== */
 .c-siteheader {
-  --block-padding: calc(36 / 16 * 1rem);
+  --header-block-padding: calc(36 / 16 * 1rem);
 
-  padding-block: var(--block-padding);
+  padding-block: var(--header-block-padding);
 
   @media (width >= 750px) {
-    --block-padding: calc(48 / 16 * 1rem);
+    --header-block-padding: calc(48 / 16 * 1rem);
   }
 
   @media (width >= 1024px) {
-    --block-padding: calc(60 / 16 * 1rem);
+    --header-block-padding: calc(60 / 16 * 1rem);
   }
 }

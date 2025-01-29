@@ -3,17 +3,17 @@
 ===================================== */
 
 .l-container {
-  --hpadding: calc(18 / 16 * 1rem);
+  --container-inline-padding: 18px;
 
   margin: 0 auto;
   max-width: 1500px;
-  padding-inline: var(--hpadding);
+  padding-inline: var(--container-inline-padding);
 
   @media (width >= 750px) {
-    --hpadding: calc(30 / 16 * 1rem);
+    --container-inline-padding: 30px;
   }
 
   @media (width >= 1024px) {
-    --hpadding: calc(48 / 16 * 1rem);
+    --container-inline-padding: 48px;
   }
 }
