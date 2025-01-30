@@ -7,6 +7,8 @@ permalink: index.html
 {% set metaTitle = site.metaTitle %}
 
 {% block htmlhead %}
+  <link rel="expect" href="#gallery" blocking="render" />
+
   <link rel="preload" href="/assets/img/characters/800x800/caitlyn.jpg" as="image">
   <link rel="preload" href="/assets/img/characters/800x800/ekko.jpg" as="image">
   <link rel="preload" href="/assets/img/characters/800x800/jinx.jpg" as="image">
@@ -33,7 +35,7 @@ permalink: index.html
             </div>
 
           </div>
-          <div class="c-home__gallery">
+          <div class="c-home__gallery" id="gallery">
             {% for item in collections.characters %}
               {% if loop.first %}<ul class="c-charslist">{% endif %}
                 <li>
