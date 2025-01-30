@@ -8,16 +8,6 @@ permalink: index.html
 
 {% block htmlhead %}
   <link rel="expect" href="#gallery" blocking="render" />
-
-  <link rel="preload" href="/assets/img/characters/800x800/caitlyn.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/ekko.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/jinx.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/mel.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/sevika.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/silco.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/vander.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/vi.jpg" as="image">
-  <link rel="preload" href="/assets/img/characters/800x800/viktor.jpg" as="image">
 {% endblock %}
 
 {% block content %}
@@ -41,10 +31,10 @@ permalink: index.html
                 <li>
                   <article class="c-charcard">
                     <a class="c-charcard__link" href="{{ item.url }}">
-                      <img src="/assets/img/characters/600x600/{{ item.data.image }}"
+                      <img src="/assets/img/characters/800x800/{{ item.data.image }}"
                            class="c-charcard__img  o-fluidimg  u-radius-s"
-                           width="600"
-                           height="600"
+                           width="800"
+                           height="800"
                            style="view-transition-name: {{ item.fileSlug }};"
                            alt="{{ item.data.name }}"
                            decoding="async">
