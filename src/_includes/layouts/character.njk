@@ -3,14 +3,14 @@
 {% set metaTitle = name + " - " + site.metaTitle %}
 
 {% block htmlhead %}
-  <link rel="expect" href="#media" blocking="render" />
+  <link rel="expect" href="#detail" blocking="render" />
 {% endblock %}
 
 {% block content %}
   <div class="c-section">
     <div class="l-container">
 
-      <div class="c-character">
+      <div class="c-character" id="detail">
         <div class="c-character__content">
           <h1 class="c-h1  u-mbe-xxs">{{ name }}</h1>
           <p class="c-character__role">{{ role }}</p>
@@ -19,7 +19,7 @@
           </div>
           <p><a class="c-backlink" href="/">All characters</a></p>
         </div>
-        <div class="c-character__media" id="media">
+        <div class="c-character__media">
           <img src="/assets/img/characters/600x600/{{ image }}"
                srcset="/assets/img/characters/600x600/{{ image }} 600w,
                        /assets/img/characters/800x800/{{ image }} 800w"
