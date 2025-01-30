@@ -3,14 +3,14 @@
 {% set metaTitle = name + " - " + site.metaTitle %}
 
 {% block htmlhead %}
-  <link rel="expect" href="#detail" blocking="render" />
+  <link rel="expect" href="#renderblock" blocking="render" />
 {% endblock %}
 
 {% block content %}
   <div class="c-section">
     <div class="l-container">
 
-      <div class="c-character" id="detail">
+      <div class="c-character" id="renderblock">
         <div class="c-character__content">
           <h1 class="c-h1  u-mbe-xxs">{{ name }}</h1>
           <p class="c-character__role">{{ role }}</p>

@@ -7,15 +7,22 @@ permalink: index.html
 {% set metaTitle = site.metaTitle %}
 
 {% block htmlhead %}
-  <link rel="expect" href="#gallery" blocking="render" />
+  <link rel="expect" href="#renderblock" blocking="render" />
+  {% for item in collections.characters %}
+    <link
+      rel="preload"
+      href="/assets/img/characters/800x800/{{ item.data.image }}"
+      as="image"
+      media="(min-width: 500px)" />
+  {% endfor %}
 {% endblock %}
 
 {% block content %}
   <div class="c-section">
       <div class="l-container">
 
-        <div class="c-home">
-          <div style="c-home__intro">
+        <div class="c-home" id="renderblock">
+          <div class="c-home__intro">
           
             <h1 class="u-sronly">Page View Transitions Demo</h1>
             <p>An exploration of progressively enhanced Page Views Transitions using CSS only. This experiment should works in latest Chromium and Safari browsers. Still glitchy online at times, mainly due to image loading I think.</p>
@@ -25,19 +32,20 @@ permalink: index.html
             </div>
 
           </div>
-          <div class="c-home__gallery" id="gallery">
+          <div class="c-home__gallery">
             {% for item in collections.characters %}
               {% if loop.first %}<ul class="c-charslist">{% endif %}
                 <li>
                   <article class="c-charcard">
                     <a class="c-charcard__link" href="{{ item.url }}">
-                      <img src="/assets/img/characters/800x800/{{ item.data.image }}"
-                           class="c-charcard__img  o-fluidimg  u-radius-s"
-                           width="800"
-                           height="800"
-                           style="view-transition-name: {{ item.fileSlug }};"
-                           alt="{{ item.data.name }}"
-                           decoding="async">
+                      <img
+                        src="/assets/img/characters/600x600/{{ item.data.image }}"
+                        class="c-charcard__img o-fluidimg u-radius-s"
+                        width="600"
+                        height="600"
+                        style="view-transition-name: {{ item.fileSlug }};"
+                        alt="{{ item.data.name }}"
+                        decoding="async" />
                     </a>
                   </article>
                 </li>
