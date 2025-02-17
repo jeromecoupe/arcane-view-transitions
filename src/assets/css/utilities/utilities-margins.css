@@ -69,3 +69,20 @@ margins
 .u-mis-sm {
   margin-inline-start: 12px;
 }
+
+/* md */
+.u-mbs-md {
+  margin-block-start: 18px;
+}
+
+.u-mie-md {
+  margin-inline-end: 18px;
+}
+
+.u-mbe-md {
+  margin-block-end: 18px;
+}
+
+.u-mis-md {
+  margin-inline-start: 18px;
+}

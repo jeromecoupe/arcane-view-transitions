@@ -2,20 +2,21 @@
 =card
 ===================================== */
 
-.c-charcard {
+.c-charactercard {
   display: block;
 }
 
-.c-charcard__link {
+.c-charactercard__link {
   display: block;
   overflow: clip;
   border-radius: var(--radius-s);
 }
 
-.c-charcard__img {
+.c-charactercard__img {
   transition: transform 0.2s ease-out;
 
-  a:hover & {
+  a:hover &,
+  a:focus & {
     position: relative;
     z-index: 1;
     transform: scale(1.018);

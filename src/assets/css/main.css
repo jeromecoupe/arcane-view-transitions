@@ -1,30 +1,30 @@
 @layer settings, base, layout, objects, components, utilities;
 
-@import "settings/_settings-variables.css" layer(settings);
+@import "settings/settings-variables.css" layer(settings);
 
-@import "base/_base-body.css" layer(base);
-@import "base/_base-fonts.css" layer(base);
-@import "base/_base-html.css" layer(base);
-@import "base/_base-links.css" layer(base);
-@import "base/_base-margins.css" layer(base);
-@import "base/_base-view-transitions.css" layer(base);
+@import "base/base-reset.css" layer(base);
+@import "base/base-body.css" layer(base);
+@import "base/base-fonts.css" layer(base);
+@import "base/base-html.css" layer(base);
+@import "base/base-links.css" layer(base);
+@import "base/base-view-transitions.css" layer(base);
 
-@import "layout/_layout-container.css" layer(layout);
+@import "layout/layout-container.css" layer(layout);
+@import "layout/layout-grid.css" layer(layout);
+@import "layout/layout-splits.css" layer(layout);
 
-@import "objects/_objects-fluidimages.css" layer(objects);
+@import "objects/objects-fluidimages.css" layer(objects);
 
-@import "components/_components-home.css" layer(components);
-@import "components/_components-titles.css" layer(components);
-@import "components/_components-backlink.css" layer(components);
-@import "components/_components-character.css" layer(components);
-@import "components/_components-charcard.css" layer(components);
-@import "components/_components-charslist.css" layer(components);
-@import "components/_components-copyright.css" layer(components);
-@import "components/_components-homecredits.css" layer(components);
-@import "components/_components-logo.css" layer(components);
-@import "components/_components-sitefooter.css" layer(components);
-@import "components/_components-siteheader.css" layer(components);
+@import "components/components-titles.css" layer(components);
+@import "components/components-backlink.css" layer(components);
+@import "components/components-character.css" layer(components);
+@import "components/components-charactercard.css" layer(components);
+@import "components/components-copyright.css" layer(components);
+@import "components/components-homecredits.css" layer(components);
+@import "components/components-logo.css" layer(components);
+@import "components/components-sitefooter.css" layer(components);
+@import "components/components-siteheader.css" layer(components);
 
-@import "utilities/_utilities-radius.css" layer(utilities);
-@import "utilities/_utilities-sronly.css" layer(utilities);
-@import "utilities/_utilities-margins.css" layer(utilities);
+@import "utilities/utilities-radius.css" layer(utilities);
+@import "utilities/utilities-sronly.css" layer(utilities);
+@import "utilities/utilities-margins.css" layer(utilities);

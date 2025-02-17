@@ -1,6 +1,4 @@
 :root {
-  --gutter: calc(24 / 16 * 1rem);
-
   --color-bg: #121212;
   --color-accent: #61d3ab;
   --color-txt: #f8f8f8;

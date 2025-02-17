@@ -3,26 +3,20 @@ character detail
 ===================================== */
 
 .c-character {
+  --character-gap: 18px;
+
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
     "a"
     "b";
-  gap: 30px;
+  gap: var(--character-gap);
 
   @media (width >= 750px) {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    --character-gap: 36px;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     grid-template-areas: "b a";
-  }
-
-  @media (width >= 1024px) {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  }
-
-  @media (width >= 1200px) {
-    grid-template-columns: minmax(0, 4fr) minmax(0, 1fr) minmax(0, 7fr);
-    grid-template-areas: "b . a";
-    gap: 18px;
   }
 }
 

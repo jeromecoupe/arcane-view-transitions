@@ -1,0 +1,57 @@
+.l-split {
+  --split-column-gap: 18px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--split-column-gap);
+}
+
+.l-split--half {
+  --split-column-gap: 36px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.l-split--1fr2fr {
+  --split-column-gap: 36px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@media (width >= 500px) {
+  .l-split--half\@sm {
+    --split-column-gap: 36px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-split--1fr2fr\@sm {
+    --split-column-gap: 36px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+@media (width >= 750px) {
+  .l-split--half\@md {
+    --split-row-gap: 0;
+    --split-column-gap: 36px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-split--1fr2fr\@md {
+    --split-row-gap: 0;
+    --split-column-gap: 36px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+@media (width >= 750px) {
+  .l-split--half\@md {
+    --split-row-gap: 0;
+    --split-column-gap: 36px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-split--1fr2fr\@md {
+    --split-row-gap: 0;
+    --split-column-gap: 36px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}

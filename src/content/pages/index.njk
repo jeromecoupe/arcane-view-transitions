@@ -6,43 +6,46 @@ permalink: index.html
 
 {% set metaTitle = site.metaTitle %}
 
+{#
 {% block htmlhead %}
-  <link rel="expect" href="#renderblock" blocking="render" />
   {% for item in collections.characters %}
     <link
       rel="preload"
-      href="/assets/img/characters/800x800/{{ item.data.image }}"
+      href="/assets/img/characters/1024x1024/{{ item.data.image }}"
       as="image"
       media="(min-width: 500px)" />
   {% endfor %}
 {% endblock %}
+#}
 
 {% block content %}
   <div class="c-section">
       <div class="l-container">
 
-        <div class="c-home" id="renderblock">
-          <div class="c-home__intro">
+        <div class="l-split l-split--1fr2fr@md">
+          <div class="u-mbe-md">
           
             <h1 class="u-sronly">Page View Transitions Demo</h1>
             <p>An exploration of progressively enhanced Page Views Transitions using CSS only. This experiment should works in latest Chromium and Safari browsers. Still glitchy online at times, mainly due to image loading I think.</p>
+
             <div class="c-homecredits">
               <p class="u-mbe-xxs">Demo by Jérôme Coupé.</p>
               <p><a href="{{ site.repository }}">Source code</a> on Github.</p>
             </div>
 
           </div>
-          <div class="c-home__gallery">
+          <div>
+
             {% for item in collections.characters %}
-              {% if loop.first %}<ul class="c-charslist">{% endif %}
+              {% if loop.first %}<ul class="l-grid l-grid--2cols l-grid--3cols@sm">{% endif %}
                 <li>
-                  <article class="c-charcard">
-                    <a class="c-charcard__link" href="{{ item.url }}">
+                  <article class="c-charactercard">
+                    <a class="c-charactercard__link" href="{{ item.url }}">
                       <img
-                        src="/assets/img/characters/600x600/{{ item.data.image }}"
-                        class="c-charcard__img o-fluidimg u-radius-s"
-                        width="600"
-                        height="600"
+                        src="/assets/img/characters/800x800/{{ item.data.image }}"
+                        class="c-charactercard__img o-fluidimg u-radius-s"
+                        width="800"
+                        height="800"
                         style="view-transition-name: {{ item.fileSlug }};"
                         alt="{{ item.data.name }}"
                         decoding="async" />
@@ -51,6 +54,7 @@ permalink: index.html
                 </li>
               {% if loop.last %}</ul>{% endif %}
             {% endfor %}
+            
           </div>
         </div>
 
