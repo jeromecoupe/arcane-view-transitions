@@ -6,7 +6,10 @@
   <link
     rel="preload"
     href="/assets/img/characters/800x800/{{ image }}"
-    imagesrcset="/assets/img/characters/1024x1024/{{ image }}"
+    imagesrcset="/assets/img/characters/800x800/{{ image }} 800w, 
+                 /assets/img/characters/1024x1024/{{ image }} 1024w"
+    imagesizes="(min-width: 750px) 66vw, 
+                100vw"
     as="image" />
 {% endblock %}
 
