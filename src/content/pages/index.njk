@@ -6,17 +6,13 @@ permalink: index.html
 
 {% set metaTitle = site.metaTitle %}
 
-{#
 {% block htmlhead %}
+  <script type="speculationrules">
   {% for item in collections.characters %}
-    <link
-      rel="preload"
-      href="/assets/img/characters/1024x1024/{{ item.data.image }}"
-      as="image"
-      media="(min-width: 500px)" />
+			{ "prerender": [{ "source": "list", "urls": ["{{ item.url }}"] }] }
   {% endfor %}
+  </script>
 {% endblock %}
-#}
 
 {% block content %}
   <div class="c-section">
