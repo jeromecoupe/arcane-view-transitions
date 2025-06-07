@@ -4,56 +4,72 @@ permalink: index.html
 
 {% extends "layouts/base.njk" %}
 
-{% set metaTitle = site.metaTitle %}
+{% set metaTitle = site.metaTitle %} 
 
 {% block htmlhead %}
   <script type="speculationrules">
-  {% for item in collections.characters %}
-			{ "prerender": [{ "source": "list", "urls": ["{{ item.url }}"] }] }
-  {% endfor %}
+    {% for item in collections.characters %}
+      { "prerender": [{ "source": "list", "urls": ["{{ item.url }}"] }] }
+    {% endfor %}
   </script>
+
+  {% for item in collections.characters %}
+  <link
+    rel="preload"
+    href="/assets/img/characters/800x800/{{ image }}"
+    imagesrcset="/assets/img/characters/800x800/{{ image }} 800w, 
+                    /assets/img/characters/1024x1024/{{ image }} 1024w"
+    imagesizes="(min-width: 750px) 66vw, 
+                    100vw"
+    as="image" />
+  {% endfor %}
 {% endblock %}
 
 {% block content %}
   <div class="c-section">
-      <div class="l-container">
+    <div class="l-container">
+      <div class="l-split l-split--1fr2fr@md">
+        <div class="u-mbe-md">
+          <h1 class="u-sronly">Page View Transitions Demo</h1>
+          <p>
+            An exploration of progressively enhanced Page Views Transitions using
+            CSS only. This experiment should works in latest Chromium and Safari
+            browsers. Still glitchy online at times, mainly due to image loading I
+            think.
+          </p>
 
-        <div class="l-split l-split--1fr2fr@md">
-          <div class="u-mbe-md">
-          
-            <h1 class="u-sronly">Page View Transitions Demo</h1>
-            <p>An exploration of progressively enhanced Page Views Transitions using CSS only. This experiment should works in latest Chromium and Safari browsers. Still glitchy online at times, mainly due to image loading I think.</p>
-
-            <div class="c-homecredits">
-              <p class="u-mbe-xxs">Demo by Jérôme Coupé.</p>
-              <p><a href="{{ site.repository }}">Source code</a> on Github.</p>
-            </div>
-
-          </div>
-          <div>
-
-            {% for item in collections.characters %}
-              {% if loop.first %}<ul class="l-grid l-grid--2cols l-grid--3cols@sm">{% endif %}
-                <li>
-                  <article class="c-charactercard">
-                    <a class="c-charactercard__link" href="{{ item.url }}">
-                      <img
-                        src="/assets/img/characters/800x800/{{ item.data.image }}"
-                        class="c-charactercard__img o-fluidimg u-radius-s"
-                        width="800"
-                        height="800"
-                        style="view-transition-name: {{ item.fileSlug }};"
-                        alt="{{ item.data.name }}"
-                        decoding="async" />
-                    </a>
-                  </article>
-                </li>
-              {% if loop.last %}</ul>{% endif %}
-            {% endfor %}
-            
+          <div class="c-homecredits">
+            <p class="u-mbe-xxs">Demo by Jérôme Coupé.</p>
+            <p><a href="{{ site.repository }}">Source code</a> on Github.</p>
           </div>
         </div>
-
+        <div>
+          {% for item in collections.characters %}
+            {% if loop.first %}
+                <ul class="l-grid l-grid--2cols l-grid--3cols@sm">
+            {% endif %}
+            <li>
+              <article class="c-charactercard">
+                <a
+                  class="c-charactercard__link"
+                  href="{{ item.url }}">
+                  <img
+                    src="/assets/img/characters/800x800/{{ item.data.image }}"
+                    class="c-charactercard__img o-fluidimg u-radius-s"
+                    width="800"
+                    height="800"
+                    style="view-transition-name: {{ item.fileSlug }};"
+                    alt="{{ item.data.name }}"
+                    decoding="async" />
+                </a>
+              </article>
+            </li>
+            {% if loop.last %}
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
+  </div>
 {% endblock %}
