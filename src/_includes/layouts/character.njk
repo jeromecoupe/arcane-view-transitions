@@ -2,20 +2,7 @@
 
 {% set metaTitle = name + " - " + site.metaTitle %}
 
-{% block htmlhead %}
-  <link
-    rel="preload"
-    href="/assets/img/characters/800x800/{{ image }}"
-    imagesrcset="/assets/img/characters/800x800/{{ image }} 800w, 
-                 /assets/img/characters/1024x1024/{{ image }} 1024w"
-    imagesizes="(min-width: 750px) 66vw, 
-                100vw"
-    as="image" />
-  
-  <script type="speculationrules">
-			{ "prerender": [{ "source": "list", "urls": ["/"] }] }
-  </script>
-{% endblock %}
+{% set pageId = "character" %}
 
 {% block content %}
   <div class="c-section">
@@ -36,8 +23,9 @@
                        /assets/img/characters/1024x1024/{{ image }} 1024w"
                sizes="(min-width: 750px) 66vw,
                       100vw"
-               class="o-fluidimg  u-radius-s"
-               style="view-transition-name: {{ page.fileSlug }};"
+               class="c-character__img  o-fluidimg  u-radius-s"
+               style="view-transition-name: {{ page.fileSlug }};       
+                      view-transition-class: character;"
                width="1024"
                height="1024"
                decoding="async"

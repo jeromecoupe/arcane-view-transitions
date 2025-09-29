@@ -4,26 +4,9 @@ permalink: index.html
 
 {% extends "layouts/base.njk" %}
 
-{% set metaTitle = site.metaTitle %} 
+{% set metaTitle = site.metaTitle %}
 
-{% block htmlhead %}
-  <script type="speculationrules">
-    {% for item in collections.characters %}
-      { "prerender": [{ "source": "list", "urls": ["{{ item.url }}"] }] }
-    {% endfor %}
-  </script>
-
-  {% for item in collections.characters %}
-  <link
-    rel="preload"
-    href="/assets/img/characters/800x800/{{ item.data.image }}"
-    imagesrcset="/assets/img/characters/800x800/{{ item.data.image }} 800w, 
-                    /assets/img/characters/1024x1024/{{ item.data.image }} 1024w"
-    imagesizes="(min-width: 750px) 66vw, 
-                    100vw"
-    as="image" />
-  {% endfor %}
-{% endblock %}
+{% set pageId = "index" %}
 
 {% block content %}
   <div class="c-section">
@@ -58,7 +41,8 @@ permalink: index.html
                     class="c-charactercard__img o-fluidimg u-radius-s"
                     width="800"
                     height="800"
-                    style="view-transition-name: {{ item.fileSlug }};"
+                    style="view-transition-name: {{ item.fileSlug }};   
+                           view-transition-class: character;"
                     alt="{{ item.data.name }}"
                     decoding="async" />
                 </a>

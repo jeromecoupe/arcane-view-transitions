@@ -1,5 +1,5 @@
 ---
-name: Caitlin
+name: Caitlyn
 role: Friendly enforcer
 image: caitlyn.jpg
 ---
