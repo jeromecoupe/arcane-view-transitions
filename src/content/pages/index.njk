@@ -32,7 +32,9 @@ permalink: index.html
                 <ul class="l-grid l-grid--2cols l-grid--3cols@sm">
             {% endif %}
             <li>
-              <article class="c-charactercard">
+              <article
+                class="c-charactercard"
+                style="view-transition-name: {{ item.fileSlug }}">
                 <a
                   class="c-charactercard__link"
                   href="{{ item.url }}">
@@ -41,8 +43,6 @@ permalink: index.html
                     class="c-charactercard__img o-fluidimg u-radius-s"
                     width="800"
                     height="800"
-                    style="view-transition-name: {{ item.fileSlug }};   
-                           view-transition-class: character;"
                     alt="{{ item.data.name }}"
                     decoding="async" />
                 </a>

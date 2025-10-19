@@ -17,8 +17,6 @@
 
   a:hover &,
   a:focus & {
-    position: relative;
-    z-index: 1;
     transform: scale(1.018);
   }
 }
