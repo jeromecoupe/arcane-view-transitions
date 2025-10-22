@@ -4,6 +4,7 @@
 
 {% set pageId = "character" %}
 
+{% block htmlhead %}
   <script type="speculationrules">
     {
       "prerender": [
@@ -14,6 +15,7 @@
       ]
     }
   </script>
+{% endblock %}
 
 {% block content %}
   <div class="c-section">
