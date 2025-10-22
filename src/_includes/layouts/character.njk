@@ -4,6 +4,17 @@
 
 {% set pageId = "character" %}
 
+  <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "urls": [ "index.html" ],
+          "eagerness": "immediate"
+        }
+      ]
+    }
+  </script>
+
 {% block content %}
   <div class="c-section">
     <div class="l-container">
