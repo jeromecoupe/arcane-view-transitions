@@ -8,6 +8,21 @@ permalink: index.html
 
 {% set pageId = "index" %}
 
+{% block htmlhead %}
+  <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "where": { 
+            "href_matches": "/characters/*"
+          },
+          "eagerness": "eager"
+        }
+      ]
+    }
+  </script>
+{% endblock %}
+
 {% block content %}
   <div class="c-section">
     <div class="l-container">
