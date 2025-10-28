@@ -4,8 +4,10 @@
 
 /* as per https://developer.chrome.com/docs/web-platform/view-transitions/cross-document */
 
-@view-transition {
-  navigation: auto;
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
 }
 
 @keyframes vtFade {
