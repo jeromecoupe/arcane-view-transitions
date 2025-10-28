@@ -31,14 +31,14 @@
           <p><a class="c-backlink" href="/">All characters</a></p>
         </div>
         <div 
-          class="c-character__media"
-          style="view-transition-name: {{ page.fileSlug }}">
+          class="c-character__media">
           <img src="/assets/img/characters/800x800/{{ image }}"
                srcset="/assets/img/characters/800x800/{{ image }} 800w, 
                        /assets/img/characters/1024x1024/{{ image }} 1024w"
                sizes="(min-width: 750px) 66vw,
                       100vw"
                class="c-character__img  o-fluidimg  u-radius-s"
+               style="view-transition-name: {{ page.fileSlug }}; view-transition-class: character;"
                width="1024"
                height="1024"
                decoding="async"

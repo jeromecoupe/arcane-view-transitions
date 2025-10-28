@@ -4,9 +4,10 @@
 
 .l-container {
   --container-inline-padding: 18px;
+  --container-max-size: 1500px;
 
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: var(--container-max-size);
   padding-inline: var(--container-inline-padding);
 
   @media (width >= 750px) {

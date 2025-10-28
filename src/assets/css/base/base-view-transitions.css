@@ -7,3 +7,25 @@
 @view-transition {
   navigation: auto;
 }
+
+@keyframes vtFade {
+  to {
+    opacity: 0;
+  }
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+::view-transition-old(.character):only-child {
+  animation-name: vtFade;
+  animation-duration: 0.05s;
+}
+
+::view-transition-new(.character):only-child {
+  animation-name: vtFade;
+  animation-delay: 0.2s;
+  animation-direction: reverse;
+}

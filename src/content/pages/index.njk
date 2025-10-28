@@ -48,14 +48,14 @@ permalink: index.html
             {% endif %}
             <li>
               <article
-                class="c-charactercard"
-                style="view-transition-name: {{ item.fileSlug }}">
+                class="c-charactercard">
                 <a
                   class="c-charactercard__link"
                   href="{{ item.url }}">
                   <img
                     src="/assets/img/characters/800x800/{{ item.data.image }}"
                     class="c-charactercard__img o-fluidimg u-radius-s"
+                    style="view-transition-name: {{ item.fileSlug }}; view-transition-class: character;"
                     width="800"
                     height="800"
                     alt="{{ item.data.name }}"

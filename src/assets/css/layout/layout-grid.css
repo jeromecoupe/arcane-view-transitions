@@ -1,79 +1,80 @@
 .l-grid {
   --grid-gap: 18px;
+  --grid-columns: 1;
 
   list-style: none;
   margin: 0;
   padding: 0;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
   gap: var(--grid-gap);
 }
 
 .l-grid--2cols {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  --grid-columns: 2;
 }
 
 .l-grid--3cols {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  --grid-columns: 3;
 }
 
 .l-grid--4cols {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  --grid-columns: 4;
 }
 
 @media (width >= 500px) {
   .l-grid--2cols\@sm {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 2;
   }
 
   .l-grid--3cols\@sm {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --grid-columns: 3;
   }
 
   .l-grid--4cols\@sm {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    --grid-columns: 4;
   }
 }
 
 @media (width >= 750px) {
   .l-grid--2cols\@md {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 2;
   }
 
   .l-grid--3cols\@md {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --grid-columns: 3;
   }
 
   .l-grid--4cols\@md {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    --grid-columns: 4;
   }
 }
 
 @media (width >= 1024px) {
   .l-grid--2cols\@lg {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 2;
   }
 
   .l-grid--3cols\@lg {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 3;
   }
 
   .l-grid--4cols\@lg {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 4;
   }
 }
 
 @media (width >= 1200px) {
   .l-grid--2cols\@xl {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 2;
   }
 
   .l-grid--3cols\@xl {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 3;
   }
 
   .l-grid--4cols\@xl {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --grid-columns: 4;
   }
 }
