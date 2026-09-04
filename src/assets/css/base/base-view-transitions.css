@@ -12,14 +12,14 @@
 
 @keyframes fadeOut {
   to {
-    scale: 0.5;
+    scale: 0.8;
     opacity: 0;
   }
 }
 
 @keyframes fadeIn {
   from {
-    scale: 0.5;
+    scale: 0.8;
     opacity: 0;
   }
 }
@@ -30,24 +30,23 @@
   --vtDuration: 0.2s;
 
   animation-duration: var(--vtDuration);
-  animation-delay: calc((var(--vtDuration) / 2) * var(--vtOrder, 0));
   animation-fill-mode: both;
 }
 
 html[data-page-id="index"]::view-transition-group(.character) {
-  --vtOrder: 0;
+  animation-delay: 0s;
 }
 
 html[data-page-id="index"]::view-transition-new(.character):only-child {
   animation-name: fadeIn;
-  --vtOrder: 1;
+  animation-delay: 0.1s;
 }
 
 html[data-page-id="character"]::view-transition-group(.character) {
-  --vtOrder: 1;
+  animation-delay: 0.05s;
 }
 
 html[data-page-id="character"]::view-transition-old(.character):only-child {
   animation-name: fadeOut;
-  --vtOrder: 0;
+  animation-delay: 0s;
 }
