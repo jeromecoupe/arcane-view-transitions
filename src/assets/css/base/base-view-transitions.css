@@ -27,7 +27,7 @@
 ::view-transition-group(*),
 ::view-transition-old(*),
 ::view-transition-new(*) {
-  --vtDuration: 1s;
+  --vtDuration: 0.2s;
 
   animation-duration: var(--vtDuration);
   animation-delay: calc((var(--vtDuration) / 2) * var(--vtOrder, 0));
