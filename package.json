@@ -7,10 +7,7 @@
     "url": "https://github.com/jeromecoupe/arcane-view-transitions.git"
   },
   "type": "module",
-  "browserslist": [
-    "last 2 versions",
-    "not IE <= 11"
-  ],
+  "browserslist": "> 0.5% and not dead",
   "scripts": {
     "clean": "rimraf './dist'",
     "server": "npx @11ty/eleventy --serve --quiet",
@@ -29,10 +26,14 @@
   "author": "Jérôme Coupé",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "lightningcss-cli": "^1.30.2",
+    "@11ty/eleventy": "^3.1.6",
+    "lightningcss-cli": "^1.33.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.1.3"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true,
+    "lightningcss-cli@1.33.0": true
   }
 }
