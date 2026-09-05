@@ -12,14 +12,14 @@
 
 @keyframes fadeOut {
   to {
-    scale: 0.95;
+    scale: 0.98;
     opacity: 0;
   }
 }
 
 @keyframes fadeIn {
   from {
-    scale: 0.95;
+    scale: 0.98;
     opacity: 0;
   }
 }
@@ -27,7 +27,7 @@
 ::view-transition-group(*),
 ::view-transition-old(*),
 ::view-transition-new(*) {
-  --vtDuration: 0.3s;
+  --vtDuration: 0.2s;
 
   animation-duration: var(--vtDuration);
   animation-fill-mode: both;

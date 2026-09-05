@@ -13,7 +13,3 @@
   overflow: clip;
   border-radius: var(--radius-s);
 }
-
-.c-characters:hover .c-charactercard:not(:hover) {
-  opacity: 0.6;
-}
