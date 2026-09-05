@@ -4,6 +4,8 @@
 
 .c-charactercard {
   display: block;
+
+  transition: opacity 0.2s ease-out;
 }
 
 .c-charactercard__link {
@@ -12,11 +14,6 @@
   border-radius: var(--radius-s);
 }
 
-.c-charactercard__img {
-  transition: transform 0.2s ease-out;
-
-  a:hover &,
-  a:focus & {
-    transform: scale(1.018);
-  }
+.c-characters:hover .c-charactercard:not(:hover) {
+  opacity: 0.6;
 }

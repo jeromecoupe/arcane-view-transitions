@@ -12,14 +12,14 @@
 
 @keyframes fadeOut {
   to {
-    scale: 0.8;
+    scale: 0.95;
     opacity: 0;
   }
 }
 
 @keyframes fadeIn {
   from {
-    scale: 0.8;
+    scale: 0.95;
     opacity: 0;
   }
 }
@@ -39,11 +39,11 @@ html[data-page-id="index"]::view-transition-group(.character) {
 
 html[data-page-id="index"]::view-transition-new(.character):only-child {
   animation-name: fadeIn;
-  animation-delay: 0.1s;
+  animation-delay: 0.15s;
 }
 
 html[data-page-id="character"]::view-transition-group(.character) {
-  animation-delay: 0.05s;
+  animation-delay: 0.18s;
 }
 
 html[data-page-id="character"]::view-transition-old(.character):only-child {
