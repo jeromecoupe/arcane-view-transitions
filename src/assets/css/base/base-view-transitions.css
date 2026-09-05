@@ -27,7 +27,7 @@
 ::view-transition-group(*),
 ::view-transition-old(*),
 ::view-transition-new(*) {
-  --vtDuration: 0.2s;
+  --vtDuration: 0.3s;
 
   animation-duration: var(--vtDuration);
   animation-fill-mode: both;
@@ -43,7 +43,7 @@ html[data-page-id="index"]::view-transition-new(.character):only-child {
 }
 
 html[data-page-id="character"]::view-transition-group(.character) {
-  animation-delay: 0.18s;
+  animation-delay: 0.15s;
 }
 
 html[data-page-id="character"]::view-transition-old(.character):only-child {
