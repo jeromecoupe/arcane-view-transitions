@@ -4,12 +4,18 @@
 
 .c-charactercard {
   display: block;
-
-  transition: opacity 0.2s ease-out;
 }
 
 .c-charactercard__link {
   display: block;
   overflow: clip;
   border-radius: var(--radius-s);
+}
+
+.c-charactercard__img {
+  transition: scale 0.2s ease-out;
+
+  a:hover & {
+    scale: 1.012;
+  }
 }

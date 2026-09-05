@@ -27,7 +27,7 @@
 ::view-transition-group(*),
 ::view-transition-old(*),
 ::view-transition-new(*) {
-  --vtDuration: 0.2s;
+  --vtDuration: 0.24s;
 
   animation-duration: var(--vtDuration);
   animation-fill-mode: both;
@@ -39,11 +39,11 @@ html[data-page-id="index"]::view-transition-group(.character) {
 
 html[data-page-id="index"]::view-transition-new(.character):only-child {
   animation-name: fadeIn;
-  animation-delay: 0.15s;
+  animation-delay: 0.2s;
 }
 
 html[data-page-id="character"]::view-transition-group(.character) {
-  animation-delay: 0.15s;
+  animation-delay: 0.1s;
 }
 
 html[data-page-id="character"]::view-transition-old(.character):only-child {
